@@ -1,5 +1,3 @@
-# README.md for Django Project
-
 # Django Project
 
 This is my Django project created as part of my learning and demonstration work.
