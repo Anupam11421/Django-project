@@ -1,0 +1,14 @@
+{% extends 'accounts/base.html' %}
+{% block content %}
+<h2>Doctor Dashboard</h2>
+<p><strong>Username:</strong> {{ profile.user.username }}</p>
+<p><strong>Full name:</strong> {{ profile.user.first_name }} {{ profile.user.last_name }}</p>
+<p><strong>Email:</strong> {{ profile.user.email }}</p>
+<p><strong>Address:</strong> {{ profile.address_line1 }}, {{ profile.city }}, {{ profile.state }}, {{ profile.pincode }}</p>
+{% if profile.profile_picture %}
+  <img src="{{ profile.profile_picture.url }}" alt="Profile picture" style="max-width:200px">
+{% else %}
+  <p>No profile picture uploaded.</p>
+{% endif %}
+<a href="{% url 'logout' %}" class="btn btn-secondary mt-3">Logout</a>
+{% endblock %}
